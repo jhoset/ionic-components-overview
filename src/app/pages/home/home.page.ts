@@ -9,7 +9,7 @@ export class HomePage {
 
   public components: IComponent[] = [
     {
-      icon: 'american-football-outline',
+      icon: 'albums-outline',
       name: 'Action Sheet',
       redirectTo: '/action-sheet'
     },
@@ -17,6 +17,11 @@ export class HomePage {
       icon: 'alert-circle-outline',
       name: 'Alert',
       redirectTo: '/alert'
+    },
+    {
+      icon: 'swap-vertical-outline',
+      name: 'Accordion',
+      redirectTo: '/accordion'
     }
   ];
 

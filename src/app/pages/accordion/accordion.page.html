@@ -1,0 +1,60 @@
+<app-header [title]="'Accordion'"></app-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <app-page-description
+    [text]="'Accordions provide collapsible sections in your content to reduce vertical space while providing a way of ' +
+     'organizing and grouping information. '">
+
+  </app-page-description>
+
+  <h6> Inline - Basic Usage </h6>
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label> First Accordion</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-list>
+          <ion-item>Second Content 1...</ion-item>
+        </ion-list>
+      </div>
+    </ion-accordion>
+
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label> Second Accordion</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-list>
+          <ion-item>Second Content 1...</ion-item>
+          <ion-item>Second Content 2...</ion-item>
+          <ion-item>Second Content 3...</ion-item>
+        </ion-list>
+
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <h6> Accordion with State Changes Handler </h6>
+  <ion-accordion-group (ionChange)="onAccordionChange($event)">
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>First Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">First Content</div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Second Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Second Content</div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Third Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Third Content</div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+</ion-content>

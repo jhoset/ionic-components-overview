@@ -3,6 +3,11 @@
 
 <ion-content class="ion-padding" [fullscreen]="true">
 
+  <app-page-description
+    [text]="'An Action Sheet is a dialog that displays a set of options. It appears on top of the app\'s content, and must be\n'+
+'    manually dismissed by the user before they can resume interaction with the app.'">
+  </app-page-description>
+
   <h6> Inline Action Sheet </h6>
   <ion-button id="open-action-sheet" expand="block"> Display</ion-button>
   <ion-action-sheet trigger="open-action-sheet"

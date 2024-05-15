@@ -1,5 +1,28 @@
-<app-header [title]="'Alert'" ></app-header>
+<app-header [title]="'Alert'"></app-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
 
+  <app-page-description
+    [text]="'An Alert is a dialog that presents users with information or collects information from the user using inputs. An\n'+
+'    alert appears on top of the app\'s content.'">
+  </app-page-description>
+
+
+  <h6> Inline Alert - Radio </h6>
+  <ion-button id="present-alert" expand="block">Display</ion-button>
+  <ion-alert
+    trigger="present-alert"
+    header="Select your favorite color"
+    [buttons]="alertButtons"
+    [inputs]="alertInputs"
+  ></ion-alert>
+
+  <h6>Controller Alerts (TS) </h6>
+  <ion-button (click)="presentAlert()" expand="block"> Display</ion-button>
+
+  <h6>Controller Alerts - MultiButtons (TS) </h6>
+  <ion-button (click)="presentAlertWithMultipleButtons()" expand="block"> Display</ion-button>
+
+  <h6>Controller Alerts - Inputs (TS) </h6>
+  <ion-button (click)="presentAlertPrompt()" expand="block"> Display</ion-button>
 </ion-content>
