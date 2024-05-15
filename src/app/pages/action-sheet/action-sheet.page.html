@@ -1,0 +1,18 @@
+<app-header [btnLabel]="'Back'" [title]="'Action Sheet'"></app-header>
+
+
+<ion-content class="ion-padding" [fullscreen]="true">
+
+  <h6> Inline Action Sheet </h6>
+  <ion-button id="open-action-sheet" expand="block"> Display</ion-button>
+  <ion-action-sheet trigger="open-action-sheet"
+                    header="Actions"
+                    (ionActionSheetDidDismiss)="onDismiss($event)"
+                    [buttons]="actionSheetButtons">
+  </ion-action-sheet>
+
+  <h6> Controller Action Sheets (TS)</h6>
+  <ion-button (click)="onClick()" expand="block">
+    Display
+  </ion-button>
+</ion-content>
