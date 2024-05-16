@@ -1,0 +1,77 @@
+<app-header [title]="'Date & Time Pickers'"></app-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <app-page-description [text]="componentDescription"></app-page-description>
+
+  <h6> Basic Usage </h6>
+  <ion-card>
+    <ion-card-content>
+      <ion-datetime></ion-datetime>
+    </ion-card-content>
+  </ion-card>
+
+  <h6> Presentation Variations </h6>
+  <ion-list>
+    <ion-list-header>
+      <ion-label> Birth Date Information</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label> Birth Date</ion-label>
+      <ion-datetime-button datetime="datetime">
+      </ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="datetime"
+                        [presentation]="'date'"
+                        [value]="defaultBirthDate.toISOString()"
+                        [formatOptions]="{
+                          date: {
+                            weekday: 'short',
+                            month: 'long',
+                            day: '2-digit',
+                          },
+                          time: {
+                            hour: '2-digit',
+                            minute: '2-digit',
+                          },
+                        }">
+          </ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+
+    <ion-item>
+      <ion-label> Birth Date & Time</ion-label>
+      <ion-datetime-button datetime="datetime2">
+      </ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="datetime2"
+                        [presentation]="'date-time'"
+                        [value]="defaultBirthDate.toISOString()"
+                        [formatOptions]="{
+                          date: {
+                            weekday: 'short',
+                            month: 'long',
+                            day: '2-digit',
+                          },
+                          time: {
+                            hour: '2-digit',
+                            minute: '2-digit',
+                          },
+                        }">
+          </ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+  </ion-list>
+
+  <h6> Restrictions Min & Max</h6>
+  <ion-card>
+    <ion-card-content>
+      <ion-datetime [min]="'2020-01-01'" [max]="'2025-12-31'"></ion-datetime>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

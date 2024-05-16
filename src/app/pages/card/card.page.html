@@ -1,0 +1,162 @@
+<app-header [title]="'Card'"></app-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <app-page-description [text]="componentDescription">
+  </app-page-description>
+
+  <h6> Basic Usage</h6>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Card Title
+      </ion-card-title>
+      <ion-card-subtitle>
+        Card Subtitle
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  </ion-card>
+
+  <h6> Custom Card </h6>
+  <ion-card>
+    <ion-item color="secondary">
+      <ion-icon slot="start" name="checkmark"></ion-icon>
+      <ion-label> Item</ion-label>
+    </ion-item>
+
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  </ion-card>
+
+  <h6> Media Card </h6>
+  <ion-card>
+    <img src="https://globaldjmix.com/files/download/a_state_of_trance_episode_1147.jpg" alt="ASOT"/>
+    <ion-card-header>
+      <ion-card-title> A State of Trance</ion-card-title>
+      <ion-card-subtitle> Armin Van Burren</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  </ion-card>
+
+  <h6> Card with Action Buttons </h6>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Card Title</ion-card-title>
+      <ion-card-subtitle> Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+
+    <ion-button fill="clear">Action 1</ion-button>
+    <ion-button fill="clear">Action 2</ion-button>
+  </ion-card>
+
+  <h6> Card with List of Items </h6>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Card Title</ion-card-title>
+      <ion-card-subtitle> Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let item of [1,2,3]">
+          <ion-thumbnail slot="start">
+            <img src="https://globaldjmix.com/files/download/a_state_of_trance_episode_1147.jpg" alt="ASOT"/>
+          </ion-thumbnail>
+          <ion-label> State of Trance</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <h6> Theming - Color Variations</h6>
+  <ion-card color="primary">
+    <ion-card-header>
+      <ion-card-title>Primary</ion-card-title>
+      <ion-card-subtitle>Primary</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content> Primary</ion-card-content>
+  </ion-card>
+
+  <ion-card color="secondary">
+    <ion-card-header>
+      <ion-card-title>Secondary</ion-card-title>
+      <ion-card-subtitle>Secondary</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content> Secondary</ion-card-content>
+  </ion-card>
+
+  <ion-card color="tertiary">
+    <ion-card-header>
+      <ion-card-title>Tertiary</ion-card-title>
+      <ion-card-subtitle>Tertiary</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content> Tertiary</ion-card-content>
+  </ion-card>
+
+  <ion-card color="success">
+    <ion-card-header>
+      <ion-card-title>Success</ion-card-title>
+      <ion-card-subtitle>Success</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content> SuccessSuccess</ion-card-content>
+  </ion-card>
+
+  <ion-card color="warning">
+    <ion-card-header>
+      <ion-card-title>Warning</ion-card-title>
+      <ion-card-subtitle>Warning</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content> Warning</ion-card-content>
+  </ion-card>
+
+  <ion-card color="danger">
+    <ion-card-header>
+      <ion-card-title>Danger</ion-card-title>
+      <ion-card-subtitle>Danger</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content> Danger</ion-card-content>
+  </ion-card>
+
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>Light</ion-card-title>
+      <ion-card-subtitle>Light</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content> Light</ion-card-content>
+  </ion-card>
+
+  <ion-card color="medium">
+    <ion-card-header>
+      <ion-card-title>Medium</ion-card-title>
+      <ion-card-subtitle>Medium</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content> Medium</ion-card-content>
+  </ion-card>
+
+  <ion-card color="dark">
+    <ion-card-header>
+      <ion-card-title>Dark</ion-card-title>
+      <ion-card-subtitle>Dark</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content> Dark</ion-card-content>
+  </ion-card>
+</ion-content>

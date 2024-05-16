@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"
+                       color="primary"
+                       mode="ios"
+                       [text]="'Back'">
+
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Avatar</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-avatar class="ion-padding">
+        <!-- <img src="assets/avb.webp" alt="Avatar"> -->
+        <ion-img [src]="'assets/avb.webp'" alt="Avatar"></ion-img>
+      </ion-avatar>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <app-page-description
+    [text]="'Avatars are circular components that usually wrap an image or icon. They can be used to represent a person or an object.'">
+  </app-page-description>
+
+  <h6> Chip - Avatar </h6>
+  <ion-chip color="primary" outline="true" *ngFor="let img of [1,2,3]">
+
+    <ion-avatar>
+      <img src="assets/avb.webp" alt="Avatar">
+    </ion-avatar>
+
+    <ion-label> Default</ion-label>
+  </ion-chip>
+
+  <h6> Item - Avatar </h6>
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start" >
+        <img src="assets/avb.webp" alt="Avatar">
+      </ion-avatar>
+
+      <ion-label> Item Avatar </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

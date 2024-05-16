@@ -1,0 +1,80 @@
+<app-header [title]="'Checkbox'"></app-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <app-page-description [text]="componentDescription"></app-page-description>
+
+  <h6> Basic Usage </h6>
+  <ion-card>
+    <ion-card-content>
+      <ion-checkbox> I agree to the terms and conditions</ion-checkbox>
+    </ion-card-content>
+  </ion-card>
+
+
+  <h6> List of Checkboxes with color Variations </h6>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let item of data" (click)="onClick(item)">
+          <ion-checkbox [color]="item.name" [(ngModel)]="item.selected"> {{ item.name }}</ion-checkbox>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+
+  <h6> Label Placement </h6>
+  <ion-card>
+    <ion-card-content>
+      <ion-checkbox labelPlacement="start">Label at the Start</ion-checkbox>
+      <br/><br>
+      <ion-checkbox labelPlacement="end">Label at the End</ion-checkbox>
+      <br/><br>
+      <ion-checkbox labelPlacement="fixed">Fixed Width Label</ion-checkbox>
+      <br/><br>
+      <ion-checkbox labelPlacement="stacked">Stacked Label</ion-checkbox>
+    </ion-card-content>
+  </ion-card>
+
+  <h6> Alignment </h6>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-checkbox label-placement="stacked" alignment="start">Aligned to the Start</ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-checkbox label-placement="stacked" alignment="center">Aligned to the Center</ion-checkbox>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <h6> Justification </h6>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-checkbox justify="start">Packed at the Start of Line</ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-checkbox justify="end">Packed at the End of Line</ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-checkbox justify="space-between">Space Between Label and Control</ion-checkbox>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <h6> Indeterminate Checkbox </h6>
+  <ion-card>
+    <ion-card-content>
+      <ion-checkbox [indeterminate]="true" > Indeterminate </ion-checkbox>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
