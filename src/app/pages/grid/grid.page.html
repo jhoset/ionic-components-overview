@@ -1,0 +1,300 @@
+<app-header [title]="'Grid'"></app-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <app-page-description [text]="componentDescription"></app-page-description>
+
+  <h6> Basic Usage </h6>
+  <ion-grid>
+    <ion-row>
+      <ion-col> 1</ion-col>
+      <ion-col> 2</ion-col>
+      <ion-col> 3</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col> 1</ion-col>
+      <ion-col> 2</ion-col>
+      <ion-col> 3</ion-col>
+      <ion-col> 4</ion-col>
+      <ion-col> 5</ion-col>
+      <ion-col> 6</ion-col>
+      <ion-col> 7</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col> 1</ion-col>
+      <ion-col> 2</ion-col>
+      <ion-col> 3</ion-col>
+      <ion-col> 4</ion-col>
+      <ion-col> 5</ion-col>
+      <ion-col> 6</ion-col>
+      <ion-col> 7</ion-col>
+      <ion-col> 8</ion-col>
+      <ion-col> 9</ion-col>
+      <ion-col> 10</ion-col>
+      <ion-col> 11</ion-col>
+      <ion-col> 12</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h6> Fixed Grid </h6>
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col> 1</ion-col>
+      <ion-col> 2</ion-col>
+      <ion-col> 3</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h6> Column Size </h6>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="auto">auto</ion-col>
+      <ion-col>2</ion-col>
+      <ion-col>3</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>1</ion-col>
+      <ion-col>2</ion-col>
+      <ion-col size="auto">
+        <ion-input placeholder="auto"></ion-input>
+      </ion-col>
+      <ion-col>4</ion-col>
+      <ion-col>5</ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>1</ion-col>
+      <ion-col size="auto">
+        <div style="width: 150px">auto</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h6> Specified Size </h6>
+  <ion-grid>
+    <ion-row>
+      <ion-col>1</ion-col>
+      <ion-col size="8">size = 8</ion-col>
+      <ion-col>3</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>1</ion-col>
+      <ion-col>2</ion-col>
+      <ion-col size="3">size = 3</ion-col>
+      <ion-col size="3">size = 3</ion-col>
+      <ion-col>5</ion-col>
+      <ion-col>6</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">size = 4</ion-col>
+      <ion-col size="4">size = 4</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h6> Responsive Size </h6>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-sm="3"> sm = 3</ion-col>
+      <ion-col size="12" size-sm="3"> sm = 3</ion-col>
+      <ion-col size="12" size-sm="3"> sm = 3</ion-col>
+      <ion-col size="12" size-sm="3"> sm = 3</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6">md = 6</ion-col>
+      <ion-col size-md="6">md = 6</ion-col>
+      <ion-col size-md="12">md = 12</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" size-md="4" size-lg="2"> md = 4, lg = 2</ion-col>
+      <ion-col size="6" size-md="4" size-lg="2"> md = 4, lg = 2</ion-col>
+      <ion-col size="6" size-md="4" size-lg="2"> md = 4, lg = 2</ion-col>
+      <ion-col size="6" size-md="4" size-lg="2"> md = 4, lg = 2</ion-col>
+      <ion-col size="6" size-md="4" size-lg="2"> md = 4, lg = 2</ion-col>
+      <ion-col size="6" size-md="4" size-lg="2"> md = 4, lg = 2</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h6> Column Offset - Specific</h6>
+  <ion-grid>
+    <ion-row>
+      <ion-col>1</ion-col>
+      <ion-col offset="3">offset = 3</ion-col>
+      <ion-col>3</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>1</ion-col>
+      <ion-col>2</ion-col>
+      <ion-col>3</ion-col>
+      <ion-col>4</ion-col>
+      <ion-col offset="2">offset = 2</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2" offset="4">offset = 4</ion-col>
+      <ion-col size="2">2</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h6> Column Offset - Responsive</h6>
+  <ion-grid>
+    <ion-row>
+      <ion-col offset-sm="2">os-sm = 2</ion-col>
+      <ion-col>2</ion-col>
+      <ion-col>3</ion-col>
+      <ion-col>4</ion-col>
+      <ion-col>5</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>1</ion-col>
+      <ion-col offset-md="2">os-md = 2</ion-col>
+      <ion-col offset-md="2">os-md = 2</ion-col>
+      <ion-col offset-md="2">os-md = 2</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col offset="6" offset-md="4" offset-lg="2">os-md = 4,os-lg = 2</ion-col>
+      <ion-col offset="6" offset-md="4" offset-lg="2">os-md = 4,os-lg = 2</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h6> Column Push & Pull - Specified </h6>
+  <ion-grid>
+    <ion-row>
+      <ion-col push="4"> push = 4</ion-col>
+      <ion-col pull="4"> pull = 4</ion-col>
+      <ion-col> 3</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>1</ion-col>
+      <ion-col push="4">push = 4</ion-col>
+      <ion-col pull="2">pull1 = 2</ion-col>
+      <ion-col pull="2">pull2 = 2</ion-col>
+      <ion-col>5</ion-col>
+      <ion-col>6</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h6> Column Push & Pull - Responsive </h6>
+  <ion-grid>
+    <ion-row>
+      <ion-col push-sm="6">push-sm = 6</ion-col>
+      <ion-col pull-sm="6">pull-sm = 6</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>1</ion-col>
+      <ion-col push-md="3">push-md = 3</ion-col>
+      <ion-col push-md="3">push-md = 3</ion-col>
+      <ion-col pull-md="6">pull-md = 6</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h6> Vertical Alignment </h6>
+  <ion-grid>
+    <ion-row class="ion-align-items-start">
+      <ion-col> start</ion-col>
+      <ion-col> start</ion-col>
+      <ion-col> start</ion-col>
+      <ion-col>
+        # <br/>
+        # <br/>
+        # <br/>
+        # <br/>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col> center</ion-col>
+      <ion-col> center</ion-col>
+      <ion-col> center</ion-col>
+      <ion-col>
+        # <br/>
+        # <br/>
+        # <br/>
+        # <br/>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row class="ion-align-items-end">
+      <ion-col> end</ion-col>
+      <ion-col> end</ion-col>
+      <ion-col> end</ion-col>
+      <ion-col>
+        # <br/>
+        # <br/>
+        # <br/>
+        # <br/>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <h6> Horizontal Alignment </h6>
+  <ion-grid>
+    <ion-row class="ion-justify-content-start">
+      <ion-col size="3"> start </ion-col>
+      <ion-col size="3"> start </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="3"> center </ion-col>
+      <ion-col size="3"> center </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row class="ion-justify-content-end">
+      <ion-col size="3"> end </ion-col>
+      <ion-col size="3"> end </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row class="ion-justify-content-around">
+      <ion-col size="3"> around </ion-col>
+      <ion-col size="3"> around </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row class="ion-justify-content-between">
+      <ion-col size="3"> between </ion-col>
+      <ion-col size="3"> between </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

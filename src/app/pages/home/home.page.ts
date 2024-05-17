@@ -52,6 +52,11 @@ export class HomePage {
       icon: 'balloon-outline',
       name: 'Floating Action Button',
       redirectTo: '/fab'
+    },
+    {
+      icon: 'grid-outline',
+      name: 'Grid',
+      redirectTo: '/grid'
     }
 
   ];
