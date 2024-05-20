@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="ion-margin-start">
+      <ion-back-button defaultHref="/"
+                       icon="home"
+                       color="danger"
+                       mode="ios"
+                       [text]="'Back'">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">List - Reorder</ion-title>
+    <ion-toggle class="ion-margin-end" slot="end" [(ngModel)]="enableReorder">Disable</ion-toggle>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <app-page-description [text]="componentDescription"></app-page-description>
+
+  <h6> Basic Usage </h6>
+  <ion-list>
+
+    <ion-reorder-group [disabled]="enableReorder" (ionItemReorder)="onHandleReorder($event)">
+      <ion-item *ngFor="let hero of heroes">
+        <ion-label> {{ hero }}</ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+    </ion-reorder-group>
+  </ion-list>
+
+  <h6> Custom Reorder Icon & Position</h6>
+  <ion-reorder-group [disabled]="enableReorder" (ionItemReorder)="onHandleReorder($event)">
+    <ion-item *ngFor="let hero of heroes">
+      <ion-label> {{ hero }}</ion-label>
+      <ion-reorder slot="start">
+        <ion-icon name="apps-outline"></ion-icon>
+      </ion-reorder>
+    </ion-item>
+  </ion-reorder-group>
+
+  <h6>Reorder Wrapper</h6>
+  <ion-reorder-group [disabled]="enableReorder" (ionItemReorder)="onHandleReorder($event)">
+    <ion-reorder *ngFor="let hero of heroes">
+      <ion-item>
+        <ion-label> {{ hero }}</ion-label>
+      </ion-item>
+    </ion-reorder>
+  </ion-reorder-group>
+</ion-content>

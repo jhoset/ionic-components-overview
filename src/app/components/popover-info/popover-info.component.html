@@ -1,0 +1,8 @@
+<ion-list>
+  @for (item of items; track item) {
+    <ion-item (click)="onSelect($index + 1)">
+      <ion-label>Item: {{ $index + 1 }}</ion-label>
+    </ion-item>
+  }
+
+</ion-list>

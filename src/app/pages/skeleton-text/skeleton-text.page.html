@@ -1,0 +1,73 @@
+<app-header [title]="'Skeleton Text'"></app-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <app-page-description [text]="componentDescription"></app-page-description>
+
+  <h6> Basic Usage </h6>
+
+  @if (!loading) {
+    <ion-list>
+      <ion-list-header> Albums</ion-list-header>
+      <ion-item class="animate__animated animate__fadeIn animate__faster">
+        <ion-thumbnail slot="start">
+          <ion-img src="assets/avb.webp"></ion-img>
+        </ion-thumbnail>
+
+        <ion-label>
+          <h3> State of Trance </h3>
+          <p> Armin </p>
+          <p> 2024 </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  } @else {
+    <ion-list>
+      <ion-list-header>
+        <ion-skeleton-text [animated]="true" style="width: 80px"></ion-skeleton-text>
+      </ion-list-header>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+        </ion-thumbnail>
+
+        <ion-label>
+          <h3>
+            <ion-skeleton-text [animated]="true" style="width: 80%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text [animated]="true" style="width: 30%;"></ion-skeleton-text>
+          </p>
+        </ion-label>
+
+      </ion-item>
+    </ion-list>
+  }
+
+
+  <h6> Theme Variation </h6>
+  <ion-list class="custom-skeleton">
+    <ion-list-header>
+      <ion-skeleton-text [animated]="true" style="width: 80px"></ion-skeleton-text>
+    </ion-list-header>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text [animated]="true" style="width: 80%;"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text [animated]="true" style="width: 30%;"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

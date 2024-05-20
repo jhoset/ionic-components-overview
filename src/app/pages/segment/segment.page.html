@@ -1,0 +1,170 @@
+<app-header [title]="'Segment'"></app-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <app-page-description [text]="componentDescription"></app-page-description>
+
+  <h6> Basic Usage </h6>
+  <ion-segment value="default">
+    <ion-segment-button value="default">
+      <ion-label>Default</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-segment [disabled]="true" value="disabled">
+    <ion-segment-button value="disabled">
+      <ion-label>Disabled</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <h6> Scrollable Segments </h6>
+  <ion-segment [scrollable]="true" value="heart">
+    <ion-segment-button value="home">
+      <ion-icon name="home"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="heart">
+      <ion-icon name="heart"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="pin">
+      <ion-icon name="pin"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="star">
+      <ion-icon name="star"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="call">
+      <ion-icon name="call"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="globe">
+      <ion-icon name="globe"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="basket">
+      <ion-icon name="basket"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="barbell">
+      <ion-icon name="barbell"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="trash">
+      <ion-icon name="trash"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="person">
+      <ion-icon name="person"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+  <h6> Theme Variations </h6>
+  <ion-segment value="default">
+    <ion-segment-button value="default">
+      <ion-label>Default</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-segment color="primary" value="primary">
+    <ion-segment-button value="primary">
+      <ion-label>Primary</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-segment color="secondary" value="secondary">
+    <ion-segment-button value="secondary">
+      <ion-label>Secondary</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-segment color="tertiary" value="tertiary">
+    <ion-segment-button value="tertiary">
+      <ion-label>Tertiary</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-segment color="success" value="success">
+    <ion-segment-button value="success">
+      <ion-label>Success</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-segment color="warning" value="warning">
+    <ion-segment-button value="warning">
+      <ion-label>Warning</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-segment color="danger" value="danger">
+    <ion-segment-button value="danger">
+      <ion-label>Danger</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-segment color="light" value="light">
+    <ion-segment-button value="light">
+      <ion-label>Light</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-segment color="medium" value="medium">
+    <ion-segment-button value="medium">
+      <ion-label>Medium</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-segment color="dark" value="dark">
+    <ion-segment-button value="dark">
+      <ion-label>Dark</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <h6> Filter Example </h6>
+  <ion-segment value="All" (ionChange)="onSegmentChange($event)">
+    <ion-segment-button value="All">
+      <ion-label>All</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="DC Comics">
+      <ion-label>DC Comics</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="Marvel">
+      <ion-label>Marvel</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-list>
+    @for (hero of (superHeroes | async) | filter: publisherSelected: 'publisher'; track hero.superhero) {
+      <ion-item>
+        <ion-label>
+          <h3>{{ hero.superhero }} | <small> {{ hero.alter_ego }} </small></h3>
+          <p> {{ hero.first_appearance }} </p>
+        </ion-label>
+
+        <ion-label color="tertiary" slot="end">
+          {{ hero.publisher }}
+        </ion-label>
+      </ion-item>
+    }
+
+  </ion-list>
+
+</ion-content>

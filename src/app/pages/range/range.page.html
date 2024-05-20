@@ -1,0 +1,47 @@
+<app-header [title]="'Progress Bar'"></app-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <app-page-description [text]="componentDescription"></app-page-description>
+
+  <h6> Label Placement </h6>
+  <div class="ion-padding">
+    <ion-range labelPlacement="start" label="Label at the Start"></ion-range>
+    <br/>
+    <ion-range labelPlacement="end" label="Label at the End"></ion-range>
+    <br/>
+    <ion-range labelPlacement="fixed" label="Fixed Width Label"></ion-range>
+    <br/>
+    <ion-range labelPlacement="stacked" label="Stacked Label"></ion-range>
+  </div>
+
+  <h6>Label Slot </h6>
+  <ion-range>
+    <div slot="label">Label with
+      <ion-text color="primary">custom HTML</ion-text>
+    </div>
+  </ion-range>
+
+  <h6> No visible Label </h6>
+  <div class="ion-padding">
+    <ion-range aria-label="Volume"></ion-range>
+  </div>
+
+  <h6> Decorations </h6>
+  <div class="ion-padding">
+    <ion-range aria-label="Temperature">
+      <ion-icon slot="start" name="snow-outline"></ion-icon>
+      <ion-icon slot="end" name="sunny-outline"></ion-icon>
+    </ion-range>
+  </div>
+
+  <h6> Snapping & Ticks </h6>
+  <div class="ion-padding">
+    <ion-range aria-label="Range with ticks" [ticks]="true" [snaps]="true" [min]="0" [max]="10"></ion-range>
+  </div>
+
+  <h6> Dual Knobs </h6>
+  <div class="ion-padding">
+    <ion-range aria-label="Dual Knobs Range" [dualKnobs]="true" [value]="{ lower: 20, upper: 80 }"></ion-range>
+  </div>
+
+</ion-content>

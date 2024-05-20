@@ -1,0 +1,43 @@
+<app-header [title]="'Searchbar'"></app-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+
+  <app-page-description [text]="componentDescription"></app-page-description>
+
+  <h6>Basic Usage </h6>
+  <ion-searchbar></ion-searchbar>
+  <ion-searchbar placeholder="Custom Placeholder"></ion-searchbar>
+  <ion-searchbar disabled="true" placeholder="Disabled"></ion-searchbar>
+  <ion-searchbar value="Value"></ion-searchbar>
+  <ion-searchbar animated="true" placeholder="Animated"></ion-searchbar>
+
+  <h6> Theme Variations </h6>
+  <ion-searchbar placeholder="Default"></ion-searchbar>
+  <ion-searchbar color="primary" placeholder="Primary"></ion-searchbar>
+  <ion-searchbar color="secondary" placeholder="Secondary"></ion-searchbar>
+  <ion-searchbar color="tertiary" placeholder="Tertiary"></ion-searchbar>
+  <ion-searchbar color="success" placeholder="Success"></ion-searchbar>
+  <ion-searchbar color="warning" placeholder="Warning"></ion-searchbar>
+  <ion-searchbar color="danger" placeholder="Danger"></ion-searchbar>
+  <ion-searchbar color="light" placeholder="Light"></ion-searchbar>
+  <ion-searchbar color="medium" placeholder="Medium"></ion-searchbar>
+  <ion-searchbar color="dark" placeholder="Dark"></ion-searchbar>
+
+
+  <h6> Search Example with Debounce</h6>
+  <ion-searchbar placeholder="Search Album"
+                 (ionInput)="onInput($event)"
+                 (ionChange)="onSearch($event)"
+                 [debounce]="500"
+                 [inputmode]="'text'"
+                 animated></ion-searchbar>
+  <ion-note> <ion-label> First 10 results </ion-label> </ion-note>
+  <ion-list>
+
+    @for (album of albums | filter: textToSearch; track album.id) {
+      <ion-item>
+        <ion-label> {{ album.title }}</ion-label>
+      </ion-item>
+    }
+  </ion-list>
+</ion-content>

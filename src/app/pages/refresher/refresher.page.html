@@ -1,0 +1,21 @@
+<app-header [title]="'Refresher'"></app-header>
+<ion-content class="ion-padding">
+
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+
+  <app-page-description [text]="componentDescription"></app-page-description>
+
+  <h6 class="ion-text-center" style="color: var(--ion-color-warning);"> Pull this content down to trigger the refresh. </h6>
+  <ion-list>
+    @for (item of items; track item) {
+      <ion-item class="animate__animated animate__fadeIn">
+        <ion-label> Awesome Label</ion-label>
+      </ion-item>
+    }
+  </ion-list>
+
+
+</ion-content>

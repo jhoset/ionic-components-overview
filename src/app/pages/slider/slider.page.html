@@ -1,0 +1,31 @@
+<app-header [title]="'Slider - SwiperJS'"></app-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <app-page-description [text]="swiperDescription"></app-page-description>
+  </div>
+
+  <h6 class="ion-padding"> Basic Usage </h6>
+  <ion-card>
+    <ion-card-content>
+      <swiper-container [pagination]="true" navigation="true">
+        @for (artist of Array(5); track artist) {
+          <swiper-slide class="swiper-slide ">
+            <ion-card>
+              <img src="assets/avb.webp" alt="AVB">
+              <ion-card-title>
+                <ion-label>State of Trance</ion-label>
+              </ion-card-title>
+              <ion-card-subtitle> Armin</ion-card-subtitle>
+              <ion-card-content>
+                <p>Armin Jozef Jacobus Daniël van Buuren es un DJ y productor discográfico neerlandés</p>
+              </ion-card-content>
+            </ion-card>
+          </swiper-slide>
+        }
+
+      </swiper-container>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,21 @@
+<app-header [title]="'Loading'"></app-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <app-page-description [text]="componentDescription"></app-page-description>
+
+  <h6>Basic Usage </h6>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-button (click)="showLoading()" > Show Loading</ion-button>
+    </ion-row>
+  </ion-grid>
+
+
+  <h6> Custom Spinner </h6>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-button id="open-loading"> Show Loading</ion-button>
+      <ion-loading trigger="open-loading" message="Loading..." [duration]="3000" [spinner]="'dots'"></ion-loading>
+    </ion-row>
+  </ion-grid>
+</ion-content>

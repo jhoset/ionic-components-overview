@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="medium" (click)="onCancel()"> Cancel</ion-button>
+    </ion-buttons>
+    <ion-title>Modal Example</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onConfirm()" [strong]="true">Confirm</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+
+  <ion-item>
+    <ion-label class="ion-text-center"> {{ name }} - {{ country }}</ion-label>
+  </ion-item>
+
+  <ion-button (click)="closeWithoutArguments()" [expand]="'block'">
+    Close without arguments
+  </ion-button>
+</ion-content>

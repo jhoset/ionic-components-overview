@@ -1,0 +1,10 @@
+<app-header [title]="'Toast'" ></app-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <app-page-description [text]="toastDescription"></app-page-description>
+
+  <h6> Basic Usage with Controller (Custom Styles) </h6>
+  <ion-button expand="block" (click)="displayToast('top')" > Display Toast at the TOP </ion-button> <br>
+  <ion-button expand="block" (click)="displayToast('middle')" > Display Toast at the MIDDLE </ion-button> <br>
+  <ion-button expand="block" (click)="displayToast('bottom')" > Display Toast at the BOTTOM </ion-button> <br>
+</ion-content>

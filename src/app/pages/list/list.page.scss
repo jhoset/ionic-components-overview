@@ -1,0 +1,11 @@
+.text-sm {
+  font-size: 12px;
+  color: var(--ion-color-tertiary);
+}
+
+.text-overflow {
+  max-width: 80%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

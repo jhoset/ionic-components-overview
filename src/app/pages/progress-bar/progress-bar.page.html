@@ -1,0 +1,29 @@
+<app-header [title]="'Progress Bar'"></app-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <app-page-description [text]="componentDescription"></app-page-description>
+
+  <h6> Determinate </h6>
+  <ion-progress-bar [value]="progress"></ion-progress-bar>
+
+  <h6> Buffer </h6>
+  <ion-progress-bar [buffer]="buffer" [value]="progress2"></ion-progress-bar>
+
+  <h6> Indeterminate </h6>
+  <ion-progress-bar type="indeterminate"></ion-progress-bar>
+
+  <h6> Indeterminate - Reversed </h6>
+  <ion-progress-bar type="indeterminate" [reversed]="true"></ion-progress-bar>
+
+  <h6> Theme Variations </h6>
+  <ion-progress-bar type="indeterminate" color="primary"></ion-progress-bar> <br>
+  <ion-progress-bar type="indeterminate" color="secondary"></ion-progress-bar> <br>
+  <ion-progress-bar type="indeterminate" color="tertiary"></ion-progress-bar> <br>
+  <ion-progress-bar type="indeterminate" color="success"></ion-progress-bar> <br>
+  <ion-progress-bar type="indeterminate" color="warning"></ion-progress-bar> <br>
+  <ion-progress-bar type="indeterminate" color="danger"></ion-progress-bar> <br>
+  <ion-progress-bar type="indeterminate" color="light"></ion-progress-bar> <br>
+  <ion-progress-bar type="indeterminate" color="medium"></ion-progress-bar> <br>
+  <ion-progress-bar type="indeterminate" color="dark"></ion-progress-bar> <br>
+
+</ion-content>

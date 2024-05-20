@@ -1,0 +1,26 @@
+<app-header [title]="'Infinite Scroll'"></app-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <app-page-description [text]="componentDescription"></app-page-description>
+
+
+  <ion-list>
+    <ion-item *ngFor="let item of data; let i = index">
+      <ion-avatar slot="start" >
+        <img src="assets/avb.webp" alt="Avatar">
+      </ion-avatar>
+      <ion-label> State of Trance {{ i + 1 }} </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll #infiniteScroll  threshold="100px" position="bottom" (ionInfinite)="onIonInfinite($event)" >
+    <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="Loading..." ></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>

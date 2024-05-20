@@ -1,0 +1,11 @@
+<app-header [title]="'Modal'"></app-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <app-page-description [text]="componentDescription" ></app-page-description>
+
+  <h6> Basic Usage with Controller </h6>
+  <ion-button (click)="onOpenModal()" expand="block" shape="round">
+    Display Modal
+  </ion-button>
+
+</ion-content>

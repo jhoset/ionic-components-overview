@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="ion-margin-start">
+      <ion-back-button defaultHref="/"
+                       color="danger"
+                       icon="home"
+                       mode="ios"
+                       [text]="'Home'">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-capitalize ion-text-center">
+      Popover
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button color="tertiary" (click)="presentPopover($event)">
+        <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <app-page-description [text]="componentDescription"></app-page-description>
+
+  <h6> Basic Usage with Controller </h6>
+  <ion-button [expand]="'block'" (click)="presentPopover($event)">
+    Display Popover
+  </ion-button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="tertiary" (click)="presentPopover($event)">
+        <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
