@@ -25,63 +25,91 @@
 
 <ion-content class="ion-padding" [fullscreen]="true">
   <ion-card>
+    <img src="assets/ia.png" alt="Ionic and Angular"/>
     <ion-card-header>
-      <ion-card-title>Welcome to Ionic-Overview App</ion-card-title>
+      <ion-card-title>Welcome to  Ionic Overview App</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <p>
-        This app is a comprehensive overview and collection of various features and components provided by Ionic and
-        Angular. It serves as a valuable resource for software engineers who are evaluating or considering Ionic and
-        Angular for building Progressive Web Applications (PWAs).
+        This app provides a comprehensive overview of the features and components available in Ionic and Angular. It
+        serves as a valuable resource for software engineers evaluating these technologies for building Progressive Web
+        Applications (PWAs).
       </p>
       <p>
-        The app includes detailed examples and usage of Ionic's extensive UI components, such as buttons, menus, badges,
-        and more. Additionally, it showcases Angular's powerful features, including data binding, component
-        interactions, and state management.
+        Explore detailed examples and usage of Ionic's extensive UI components and Angular's powerful features,
+        including data binding, component interactions, and state management.
       </p>
       <p>
-        By exploring this app, you will gain insights into how to effectively use Ionic's and Angular's capabilities to
-        create responsive, high-performance, and user-friendly applications. Whether you're new to these frameworks or
-        an experienced developer, this app provides a practical reference to enhance your development process.
+        This app is designed to enhance your development process, whether you're new to these frameworks or an
+        experienced developer.
       </p>
     </ion-card-content>
   </ion-card>
 
-  <ion-list>
-    <ion-list-header>
-      <ion-label>Key Features</ion-label>
-    </ion-list-header>
-    <ion-item>
-      <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
-      <ion-label>Extensive use of Ionic UI components</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
-      <ion-label>Seamless integration with Angular</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
-      <ion-label>Responsive and adaptive design</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
-      <ion-label>Comprehensive routing and navigation</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
-      <ion-label>State management and data binding</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
-      <ion-label>Support for Progressive Web Applications (PWAs)</ion-label>
-    </ion-item>
-  </ion-list>
-
-  <ion-footer>
-    <ion-toolbar>
-      <ion-title size="small">Explore and Learn</ion-title>
-    </ion-toolbar>
-  </ion-footer>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Technologies Used</ion-card-subtitle>
+      <ion-card-title>Key Features</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="assets/ionic.webp" alt="Ionic Logo"/>
+          </ion-avatar>
+          <ion-label>
+            <h2>Extensive use of Ionic UI components</h2>
+            <p>Create stunning mobile and desktop apps with Ionic's pre-built components.</p>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="assets/angular.png" alt="Angular Logo"/>
+          </ion-avatar>
+          <ion-label>
+            <h2>Seamless integration with Angular</h2>
+            <p>Utilize Angular's powerful features for robust and scalable applications.</p>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="phone-portrait-outline" slot="start"></ion-icon>
+          <ion-label>
+            <h2>Responsive and adaptive design</h2>
+            <p>Ensure your app looks great on all devices with responsive design principles.</p>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="navigate-circle-outline" slot="start"></ion-icon>
+          <ion-label>
+            <h2>Comprehensive routing and navigation</h2>
+            <p>Implement efficient navigation with Angular's router.</p>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="sync-outline" slot="start"></ion-icon>
+          <ion-label>
+            <h2>State management and data binding</h2>
+            <p>Manage your application state effectively with Angular's features.</p>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="cloud-done-outline" slot="start"></ion-icon>
+          <ion-label>
+            <h2>Support for Progressive Web Applications (PWAs)</h2>
+            <p>Build reliable and fast PWAs with Ionic and Angular.</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 
 
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title size="small">
+      Explore and learn more checking
+      <a href="https://ionicframework.com/docs/components" target="_blank" rel="noopener noreferrer">Official Ionic Documentation</a>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
