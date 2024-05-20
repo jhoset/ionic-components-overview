@@ -40,3 +40,13 @@
 .red ,.red .sc-ion-action-sheet-md {
   color: red !important;
 }
+
+
+ion-item {
+  --background: transparent;
+}
+
+h6 {
+  color: var(--ion-color-dark);
+  font-weight: bold;
+}

@@ -7,7 +7,7 @@ import {Component, Input} from '@angular/core';
 })
 export class HeaderComponent {
 
-  @Input() btnLabel: string = 'Back';
+  @Input() btnLabel: string = 'Home';
   @Input({required: true}) title!: string;
 
   constructor() {

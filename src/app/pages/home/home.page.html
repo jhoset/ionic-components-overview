@@ -1,21 +1,87 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title color="primary">Ionic Components  </ion-title>
-    <ion-badge class="ion-margin-end" slot="end" [color]="'tertiary'" > Angular </ion-badge>
+
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="default"></ion-menu-button>
+    </ion-buttons>
+
+    <!-- OLD VERSION - COMPLICATED
+    <ion-buttons slot="start" >
+      <ion-button (click)="showMenu()" >
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+    -->
+    <ion-badge class="ion-margin-end" slot="end">
+      Ionic 7
+    </ion-badge>
+    <ion-badge class="ion-margin-end" slot="end" [color]="'tertiary'">
+      Angular 17
+    </ion-badge>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-
-
-  <br>
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Welcome to Ionic-Overview App</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        This app is a comprehensive overview and collection of various features and components provided by Ionic and
+        Angular. It serves as a valuable resource for software engineers who are evaluating or considering Ionic and
+        Angular for building Progressive Web Applications (PWAs).
+      </p>
+      <p>
+        The app includes detailed examples and usage of Ionic's extensive UI components, such as buttons, menus, badges,
+        and more. Additionally, it showcases Angular's powerful features, including data binding, component
+        interactions, and state management.
+      </p>
+      <p>
+        By exploring this app, you will gain insights into how to effectively use Ionic's and Angular's capabilities to
+        create responsive, high-performance, and user-friendly applications. Whether you're new to these frameworks or
+        an experienced developer, this app provides a practical reference to enhance your development process.
+      </p>
+    </ion-card-content>
+  </ion-card>
 
   <ion-list>
-    <ion-item detail *ngFor="let c of components" [routerLink]="c.redirectTo">
-      <ion-icon [name]="c.icon" slot="start" color="primary" ></ion-icon>
-      {{ c.name }}
+    <ion-list-header>
+      <ion-label>Key Features</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
+      <ion-label>Extensive use of Ionic UI components</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
+      <ion-label>Seamless integration with Angular</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
+      <ion-label>Responsive and adaptive design</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
+      <ion-label>Comprehensive routing and navigation</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
+      <ion-label>State management and data binding</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
+      <ion-label>Support for Progressive Web Applications (PWAs)</ion-label>
     </ion-item>
   </ion-list>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title size="small">Explore and Learn</ion-title>
+    </ion-toolbar>
+  </ion-footer>
 
 
 </ion-content>

@@ -3,12 +3,14 @@ import {CommonModule} from '@angular/common';
 import {HeaderComponent} from "./header/header.component";
 import {IonicModule} from "@ionic/angular";
 import {PageDescriptionComponent} from "./page-description/page-description.component";
+import {PopoverInfoComponent} from "./popover-info/popover-info.component";
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    PageDescriptionComponent
+    PageDescriptionComponent,
+    PopoverInfoComponent,
   ],
   imports: [
     CommonModule,
@@ -16,7 +18,8 @@ import {PageDescriptionComponent} from "./page-description/page-description.comp
   ],
   exports: [
     HeaderComponent,
-    PageDescriptionComponent
+    PageDescriptionComponent,
+    PopoverInfoComponent
   ]
 })
 export class ComponentsModule {

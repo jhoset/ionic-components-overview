@@ -1,15 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
+    <ion-buttons slot="start" class="ion-margin-start">
       <ion-back-button defaultHref="/"
-                       color="primary"
+                       color="danger"
+                       icon="home"
                        mode="ios"
                        [text]="'Back'">
 
       </ion-back-button>
     </ion-buttons>
 
-    <ion-title>Button</ion-title>
+    <ion-title class="ion-text-center">Button</ion-title>
 
     <ion-buttons slot="end">
       <ion-button (click)="onClick()" color="danger" shape="round">
