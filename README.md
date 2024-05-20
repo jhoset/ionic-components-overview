@@ -22,5 +22,8 @@ The deployed version of this application can be accessed [Not available yet](htt
 ## Development server
 To run the development server, use the following command: `ionic serve`
 
-## App Home Page
+## Desktop version
 ![imagen](https://github.com/jhoset/ionic-components-recap/assets/29497145/ec805ade-3f03-401c-9fc6-98cea445907b)
+## Mobile version
+![imagen](https://github.com/jhoset/ionic-components-overview/assets/29497145/3245295d-fdd5-4a5d-9bfd-3ae0631ee5f2)
+
